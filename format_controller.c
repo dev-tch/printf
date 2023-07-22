@@ -71,6 +71,8 @@ len_printed_chars = print_specs[j].format_spec(args);
 return (len_printed_chars);
 }
 } /*end for*/
-return (0);
+_putchar('%');
+_putchar(*str);
+return (2);
 }
 
