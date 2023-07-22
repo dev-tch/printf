@@ -8,5 +8,5 @@
 ### changes
 
 - add _printf.c , format_controller.c && modif main.h
-
+- add print_str.c , print_char.c _putchar.c
 
