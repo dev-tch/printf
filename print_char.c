@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * print_char - function that outputs a character
  * @list: argument list containing a character to be printed.
