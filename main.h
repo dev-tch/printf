@@ -4,8 +4,8 @@
 #include <stdarg.h>
 /*prototypes here */
 int _putchar(char ch);
-int print_char (va_list list);
-int print_str (va_list list);
+int print_char(va_list list);
+int print_str(va_list list);
 int _printf(const char*, ...);
 int format_controller(const char*, va_list args);
 int handle_specifier(const char *, va_list);
