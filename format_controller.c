@@ -10,7 +10,7 @@ int format_controller(const char *fmt, va_list args)
 int len_printed_chars = 0, len_handled_spec = 0;
 const char *current, *next;
 /*check if pointer to fmt is valid*/
-if (fmt == NULL)
+if (fmt == NULL || (fmt != NULL && *fmt != '\0'))
 return (-1);
 /*iterate throught fmt*/
 while (*(current = fmt) != '\0')/*loop1 :start while*/
@@ -38,11 +38,13 @@ if (*next != '\0')
 {
 fmt++;
 len_handled_spec = handle_specifier(next, args);
-}
 if (len_handled_spec == -1)
 return (-1);
 else
 len_printed_chars += len_handled_spec;
+}
+else
+return (-1);
 } /*loop1 :end while*/
 return (len_printed_chars);
 }
