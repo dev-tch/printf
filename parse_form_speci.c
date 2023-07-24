@@ -29,7 +29,7 @@ char *conv_nb_to_str(int n, char sign)
 int size, rem;
 int idx = 0;
 char *ptr;
-size = get_nb_digits(n)
+size = get_nb_digits(n);
 /*one fo sign , one for '\0' and rest for number*/
 ptr = (char *) malloc(1 +  1  +  size);
 if (ptr == NULL)
