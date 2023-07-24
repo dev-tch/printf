@@ -63,7 +63,8 @@ int nb_specs = 0;
 format print_specs[] = {
 	{'c', print_char},
 	{'s', print_str},
-	{'d', print_decimal}
+	{'d', print_decimal},
+	{'i', parse_form_speci}
 };
 /*loop throught array print_specs*/
 nb_specs = sizeof(print_specs) / sizeof(print_specs[0]);
