@@ -60,7 +60,11 @@ int j = 0;
 int len_printed_chars = 0;
 int nb_specs = 0;
 /*declare array of struct format*/
-format print_specs[] = {{'c', print_char}, {'s', print_str}};
+format print_specs[] = {
+	{'c', print_char},
+	{'s', print_str},
+	{'d', print_decimal}
+};
 /*loop throught array print_specs*/
 nb_specs = sizeof(print_specs) / sizeof(print_specs[0]);
 for (j = 0; j < nb_specs; j++)

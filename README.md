@@ -1,4 +1,4 @@
-## C Project: implementation our own printf function 
+## C Project: implementation our own printf function
 
 ### Team members
 
@@ -9,4 +9,5 @@
 
 - add _printf.c , format_controller.c && modif main.h
 - add print_str.c , print_char.c _putchar.c
+- add print_decimal.c
 
