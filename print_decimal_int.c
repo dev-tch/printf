@@ -9,7 +9,7 @@
 int print_decimal(va_list list)
 {
 	int num = va_arg(list, int), buffer_int[10];
-	int index = 0;
+	int index = 0, i = 0;
 	char sign;
 
 	if (num < 0)
@@ -30,7 +30,7 @@ int print_decimal(va_list list)
 	}
 	if (sign == '-')
 		_putchar('-');
-	for (int i = index - 1; i >= 0; i--)
+	for (i = index - 1; i >= 0; i--)
 		_putchar('0' + buffer_int[i]);
 	_putchar('\n');
 	return (1);
