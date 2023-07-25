@@ -33,5 +33,6 @@ int print_octal(va_list list)
 	}
 	for (i = index - 1; i >= 0; i--)
 		_putchar('0' + buffer_int[i]);
+	free(buffer_int);
 	return (1);
 }
