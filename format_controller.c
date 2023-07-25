@@ -67,7 +67,8 @@ format print_specs[] = {
 	{'i', parse_form_speci},
 	{'r', print_rev_str},
 	{'b', print_binary},
-	{'R', print_Rot13}
+	{'R', print_Rot13},
+	{'u', print_unsigned}
 };
 /*loop throught array print_specs*/
 nb_specs = sizeof(print_specs) / sizeof(print_specs[0]);
