@@ -9,9 +9,17 @@
 
 int print_hexadecimal_maj(va_list list)
 {
-	long long int num = va_arg(list, long long int), buffer_int[20];
+	int num = va_arg(list, int);
+	unsigned int *buffer_int;
 	int index = 0, i = 0;
+	int temp_num = num;
 
+	while (temp_num > 0)
+	{
+		temp_num /= 10;
+		i++;
+	}
+	buffer_int = (unsigned int *)malloc(sizeof(int) * i);
 	if (num < 0)
 		return (-1);
 	if (num < 10)
