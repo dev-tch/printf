@@ -16,6 +16,7 @@ int format_controller(const char*, va_list args);
 int handle_specifier(const char *, va_list);
 int print_binary(va_list list);
 int print_unsigned(va_list list);
+int print_octal(va_list list);
 /**
 * struct _format - associate specifier with pointer function
 * @spec: specifier
