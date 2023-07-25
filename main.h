@@ -13,6 +13,7 @@ int print_rev_str(va_list list);
 int _printf(const char*, ...);
 int format_controller(const char*, va_list args);
 int handle_specifier(const char *, va_list);
+int print_binary(va_list list);
 /**
 * struct _format - associate specifier with pointer function
 * @spec: specifier
