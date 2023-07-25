@@ -61,12 +61,21 @@ int len_printed_chars = 0;
 int nb_specs = 0;
 /*declare array of struct format*/
 format print_specs[] = {
+<<<<<<< HEAD
 	{'c', print_char},
 	{'s', print_str},
 	{'d', parse_form_speci},
 	{'i', parse_form_speci},
 	{'r', print_rev_str},
 	{'b', print_binary}
+=======
+{'c', print_char},
+{'s', print_str},
+{'d', parse_form_speci},
+{'i', parse_form_speci},
+{'r', print_rev_str},
+{'R', print_Rot13}
+>>>>>>> 8838f88d18579725dc210354cd458743f6a3b873
 };
 /*loop throught array print_specs*/
 nb_specs = sizeof(print_specs) / sizeof(print_specs[0]);
