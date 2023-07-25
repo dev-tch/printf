@@ -102,6 +102,7 @@ return (1);
 if (nb < 0 && nb >= -9)
 {
 _putchar('-');
+nb = nb *sign;
 _putchar (nb + '0');
 return (2);
 }
