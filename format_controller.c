@@ -64,7 +64,8 @@ format print_specs[] = {
 	{'c', print_char},
 	{'s', print_str},
 	{'d', parse_form_speci},
-	{'i', parse_form_speci}
+	{'i', parse_form_speci},
+	{'r', print_rev_str}
 };
 /*loop throught array print_specs*/
 nb_specs = sizeof(print_specs) / sizeof(print_specs[0]);
