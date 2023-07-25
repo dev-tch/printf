@@ -69,7 +69,8 @@ format print_specs[] = {
 	{'b', print_binary},
 	{'R', print_Rot13},
 	{'u', print_unsigned},
-	{'o', print_octal}
+	{'o', print_octal},
+	{'x', print_hexadecimal_min}
 };
 /*loop throught array print_specs*/
 nb_specs = sizeof(print_specs) / sizeof(print_specs[0]);
