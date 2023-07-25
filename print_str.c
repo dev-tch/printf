@@ -7,10 +7,18 @@
  **/
 int print_str(va_list list)
 {
-	int i;
-	char *str = va_arg(list, char*);
-
-	for (i = 0 ; str[i] != '\0' ; i++)
-		_putchar(str[i]);
-	return (1);
+int i, len = 0, ret_val;
+char *str = va_arg(list, char*);
+/*fix1 */
+if (str == NULL)
+return (-1);
+/*fix2*/
+for (i = 0 ; str[i] != '\0' ; i++)
+{
+ret_val = _putchar(str[i]);
+if (ret_val == -1)
+return (-1);
+len++;
+}
+return (len);
 }

@@ -1,5 +1,4 @@
 #include "main.h"
-
 /****************************************************************
 *  helper functions for our principal function parse_form_speci
 *
@@ -58,20 +57,20 @@ return (ptr);
 */
 int print_str_nb(char *str)
 {
-int len  = 0;
-while (*str != '\0')
+int len  = 0, j = 0;
+while (str[j] != '\0')
 {
-if (*str == '-')
+if (j == 0 && str[j] == '-')
 {
 _putchar('-');
 len++;
 }
-else
+if (j > 0)
 {
-_putchar(*str);
+_putchar(str[j]);
 len++;
 }
-str++;
+j++;
 } /*while loop*/
 return (len);
 }
