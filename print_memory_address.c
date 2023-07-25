@@ -71,6 +71,12 @@ long  int address_value;
 char *ptr;
 int len = 0;
 address_value =  va_arg(list, unsigned long  int);
+/*case adress_value NULL*/
+if (address_value == 0)
+{
+len = print_items_of_str("(nil)");
+return (len);
+}
 ptr = conv_val_to_base(address_value, 16);
 /*if ptr is NULL we must return (nil) like the standart lib printf*/
 if (!compareStrings(ptr, "0"))
