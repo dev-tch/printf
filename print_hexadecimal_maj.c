@@ -9,7 +9,7 @@
 
 int print_hexadecimal_maj(va_list list)
 {
-	int num = va_arg(list, int), buffer_int[10];
+	long long int num = va_arg(list, long long int), buffer_int[20];
 	int index = 0, i = 0;
 
 	if (num < 0)
@@ -17,7 +17,6 @@ int print_hexadecimal_maj(va_list list)
 	if (num < 10)
 	{
 		_putchar('0' + num);
-		_putchar('\n');
 		return (1);
 	}
 	while (num > 0)
@@ -32,6 +31,5 @@ int print_hexadecimal_maj(va_list list)
 		else
 			_putchar('0' + buffer_int[i]);
 	}
-	_putchar('\n');
 	return (1);
 }
