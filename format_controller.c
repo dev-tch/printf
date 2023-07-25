@@ -71,7 +71,8 @@ format print_specs[] = {
 	{'u', print_unsigned},
 	{'o', print_octal},
 	{'x', print_hexadecimal_min},
-	{'X', print_hexadecimal_maj}
+	{'X', print_hexadecimal_maj},
+	{'p', print_memory_address}
 };
 /*loop throught array print_specs*/
 nb_specs = sizeof(print_specs) / sizeof(print_specs[0]);
