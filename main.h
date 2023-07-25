@@ -18,6 +18,7 @@ int print_binary(va_list list);
 int print_unsigned(va_list list);
 int print_octal(va_list list);
 int print_hexadecimal_min(va_list list);
+int print_hexadecimal_maj(va_list list);
 /**
 * struct _format - associate specifier with pointer function
 * @spec: specifier
