@@ -7,7 +7,7 @@
 */
 char *conv_val_to_base(long int number, int  base)
 {
-const  char  items_of_bases[] = "0123456789ABCDEF";
+const  char  items_of_bases[] = "0123456789abcdef";
 /*A static local variable retains its value across multiple function calls*/
 static char buffer[50];
 char sign = '0';
