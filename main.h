@@ -20,6 +20,7 @@ int print_octal(va_list list);
 int print_hexadecimal_min(va_list list);
 int print_hexadecimal_maj(va_list list);
 int print_memory_address(va_list list);
+int print_custom__string(va_list list);
 /**
 * struct _format - associate specifier with pointer function
 * @spec: specifier
@@ -31,6 +32,8 @@ typedef struct _format
 char spec;
 int (*format_spec)(va_list);
 } format;
+
+int print_hexadecimal(int num);
 #endif
 
 

@@ -12,3 +12,4 @@
 - add print_decimal.c
 - add print_binary.c, print_unsigned.c, print_octal.c
 - add print_hexadecimal_maj, print_hecadecimal_min
+- add print_custom_string
