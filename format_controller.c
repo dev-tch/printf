@@ -38,11 +38,13 @@ if (*next != '\0')
 {
 fmt++;
 len_handled_spec = handle_specifier(next, args);
-}
 if (len_handled_spec == -1)
 return (-1);
 else
 len_printed_chars += len_handled_spec;
+}
+else /*case next is '\0' et current is '%' we must return failed code -1*/
+return (-1);
 } /*loop1 :end while*/
 return (len_printed_chars);
 }
