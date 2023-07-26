@@ -7,11 +7,19 @@
  **/
 int print_str(va_list list)
 {
-int i, len = 0, ret_val;
+int i, len = 0, ret_val, j = 0;
+const char *nil_str = "(null)";
 char *str = va_arg(list, char*);
 /*fix1 */
 if (str == NULL)
-return (-1);
+{/*(null)*/
+for (j = 0 ; j < 6; j++)
+{
+len++;
+_putchar(nil_str[j]);
+}
+return (6);
+}
 /*fix2*/
 for (i = 0 ; str[i] != '\0' ; i++)
 {
