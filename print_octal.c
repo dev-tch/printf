@@ -19,8 +19,6 @@ int print_octal(va_list list)
 		i++;
 	}
 	buffer_int = (unsigned int *)malloc(sizeof(int) * i);
-	if (num < 0)
-		return (-1);
 	if (num < 8)
 	{
 		_putchar('0' + num);
