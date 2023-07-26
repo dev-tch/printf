@@ -40,5 +40,5 @@ int print_hexadecimal_maj(va_list list)
 			_putchar('0' + buffer_int[i]);
 	}
 	free(buffer_int);
-	return (1);
+	return (2);
 }
