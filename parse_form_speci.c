@@ -33,7 +33,7 @@ size = get_nb_digits(n);
 ptr = (char *) malloc(1 +  1  +  size);
 if (ptr == NULL)
 {
-return (0);
+return (NULL);
 }
 if (sign == 1)
 ptr[0]  = '+';
@@ -107,6 +107,11 @@ _putchar (nb + '0');
 return (2);
 }
 ptr_nb = conv_nb_to_str(nb, sign);
+if (ptr_nb == NULL)
+{
+/*return a value non zero for failed allocated memory*/
+return (-1);
+}
 len = print_str_nb(ptr_nb);
 free(ptr_nb);
 return (len);
