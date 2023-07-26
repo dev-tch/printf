@@ -9,11 +9,15 @@
  **/
 int print_unsigned(va_list list)
 {
-	unsigned int num = va_arg(list, unsigned int);
+	int num = va_arg(list, unsigned int);
 	unsigned int divisor = 1;
-	unsigned int nb = num;
+	int nb = num;
 	int digit;
 
+	if (num == 0)
+		_putchar('0');
+	if (num < 0)
+		return (-1);
 	while (num >= 10)
 	{
 		divisor *= 10;
