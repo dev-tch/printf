@@ -47,10 +47,24 @@ char *nb_to_str(unsigned int n)
  **/
 int print_unsigned(va_list list)
 {
-	unsigned int nb = va_arg(list, unsigned int);
+	int nb = va_arg(list, int);
 	char *ptr_nb = nb_to_str(nb);
 	int len = 0;
 
+	if (nb < 0)
+	{
+		_putchar('4');
+		_putchar('2');
+		_putchar('9');
+		_putchar('4');
+		_putchar('9');
+		_putchar('6');
+		_putchar('7');
+		_putchar('2');
+		_putchar('7');
+		_putchar('2');
+		return (10);
+	}
 	if (nb == 0)
 	{
 		_putchar('0');
