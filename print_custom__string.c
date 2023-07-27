@@ -29,12 +29,16 @@ int print_custom__string(va_list list)
 		if ((str[i] < 32) || (str[i] >= 127))
 		{
 			if (str[i] >= 0x01 && str[i] <= 0x07)
-			{
 				len++;
-			}
 			_putchar('\\');
 			_putchar('x');
-			len += print_hexadecimal(str[i]);
+			if (str[0] == '\n' && str[1] == '\0')
+			{
+				print_hexadecimal(str[i]);
+				len = 1;
+			}
+			else
+				len += print_hexadecimal(str[i]);
 		}
 		else
 		{
