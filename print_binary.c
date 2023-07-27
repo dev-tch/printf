@@ -11,7 +11,7 @@ int print_binary(va_list list)
 {
 int num = va_arg(list, int);
 int i = 0;
-/*fix_1 len*/
+/*fix_1 len */
 int len = 0;
 unsigned int mask;
 int binary_digits = sizeof(num) * 8;
