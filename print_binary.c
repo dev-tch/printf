@@ -9,16 +9,14 @@
  **/
 int print_binary(va_list list)
 {
-int num = va_arg(list, int);
+unsigned int num = va_arg(list, unsigned int);
 int i = 0;
 /*fix_1 len */
 int len = 0;
 unsigned int mask;
 int binary_digits = sizeof(num) * 8;
 int leading_zero = 1;
-if (num < 0)
-return (-1);
-if (num >= 0 && num < 2)
+if (num < 2)
 {
 /* fix : num < 2 ==> binary 0 or 1 */
 if (num == 0)
