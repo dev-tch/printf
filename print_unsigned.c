@@ -6,7 +6,7 @@
  * @n: number
  * Return: int
  **/
-int nb_digits(int n)
+int nb_digits(unsigned int n)
 {
 	if (n == 0)
 		return (0);
@@ -47,29 +47,16 @@ char *nb_to_str(unsigned int n)
  **/
 int print_unsigned(va_list list)
 {
-	int nb = va_arg(list, int);
-	char *ptr_nb = nb_to_str(nb);
+	unsigned int nb = va_arg(list, unsigned int);
+	char *ptr_nb;
 	int len = 0;
 
-	if (nb < 0)
+	if (nb <= 9)
 	{
-		_putchar('4');
-		_putchar('2');
-		_putchar('9');
-		_putchar('4');
-		_putchar('9');
-		_putchar('6');
-		_putchar('7');
-		_putchar('2');
-		_putchar('7');
-		_putchar('2');
-		return (10);
-	}
-	if (nb == 0)
-	{
-		_putchar('0');
+		_putchar(nb + '0');
 		return (1);
 	}
+	ptr_nb = nb_to_str(nb);
 	if (ptr_nb == NULL)
 		return (0);
 	while (ptr_nb[len] != '\0')
